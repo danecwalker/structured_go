@@ -1,6 +1,9 @@
 package event
 
 type Broker interface {
+	// Run runs the broker.
+	Run()
+
 	// Publish publishes an event to the broker.
 	Publish(event Event) error
 
