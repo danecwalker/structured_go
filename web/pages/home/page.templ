@@ -1,0 +1,21 @@
+package home
+
+import "github.com/danecwalker/structured_go/router"
+import "github.com/danecwalker/structured_go/web/components"
+
+func Get(rc *router.RouteContext) error {
+	return rc.HTML(200, Page())
+}
+
+templ Page() {
+    <html>
+        <head>
+            <title>Home</title>
+        </head>
+        <body>
+            <h1>Home</h1>
+            <p>Home page</p>
+            @components.Hello("Home")
+        </body>
+    </html>
+}

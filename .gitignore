@@ -1,0 +1,16 @@
+# OS generated files #
+.DS_Store
+
+# Build generated #
+build/
+dist/
+bin/
+tmp/
+temp/
+out/
+*.log
+*.log.*
+*_templ.go
+
+# Dependency directories #
+node_modules/

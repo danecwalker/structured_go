@@ -1,0 +1,23 @@
+package about
+
+import "github.com/danecwalker/structured_go/router"
+import "github.com/danecwalker/structured_go/web/components"
+import "fmt"
+
+func Get(rc *router.RouteContext) error {
+	return rc.HTML(200, Page(rc))
+}
+
+templ Page(rc *router.RouteContext) {
+    <html>
+        <head>
+            <title>About</title>
+        </head>
+        <body>
+            <h1>About</h1>
+            <p>About page</p>
+            @components.Hello("About")
+            <p>{fmt.Sprint(rc.Get("message"))}</p>
+        </body>
+    </html>
+}
